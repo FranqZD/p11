@@ -1,0 +1,16 @@
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfvars
+*.tfvars.json
+crash.log
+crash.*.log
+
+# Credenciales
+pass.txt
+.env
+.env.*
+
+# Sistema
+.DS_Store
