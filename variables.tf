@@ -16,4 +16,5 @@ variable "d1_database_name"{
 variable "worker_name"{
     type = string
     description = "cloudlfare worker name"
+    default = "mysuperworker"
 }
