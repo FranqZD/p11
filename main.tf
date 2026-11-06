@@ -11,17 +11,7 @@ module "worker" {
     d1_database_id = module.d1.database_id
 }
 
-moved {
-    from = cloudflare_d1_database.app
+import {
     to = module.d1.cloudflare_d1_database.app
-}
-
-moved {
-    from = cloudflare_workers_script.hello
-    to = module.worker.cloudflare_workers_script.hello
-}
-
-moved {
-    from = cloudflare_workers_script_subdomain.hello
-    to = module.worker.cloudflare_workers_script_subdomain.hello
+    id = "${var.account_id}/24ba1d35-c551-44f5-bf02-b2923cd90f15"
 }
