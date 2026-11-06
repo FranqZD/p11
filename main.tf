@@ -10,3 +10,18 @@ module "worker" {
     worker_name = var.worker_name
     d1_database_id = module.d1.database_id
 }
+
+moved {
+    from = cloudflare_d1_database.app
+    to = module.d1.cloudflare_d1_database.app
+}
+
+moved {
+    from = cloudflare_workers_script.hello
+    to = module.worker.cloudflare_workers_script.hello
+}
+
+moved {
+    from = cloudflare_workers_script_subdomain.hello
+    to = module.worker.cloudflare_workers_script_subdomain.hello
+}
